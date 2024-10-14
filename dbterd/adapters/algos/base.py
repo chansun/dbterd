@@ -229,7 +229,7 @@ def get_table(
                 resource=node_name_parts[0],
                 package=node_name_parts[1],
                 model=node_name_parts[2],
-                database=manifest_node.database.lower(),
+                database="IU",
                 schema=manifest_node.schema_.lower(),
                 table=(
                     manifest_node.identifier.lower()
@@ -244,7 +244,7 @@ def get_table(
         ),
         node_name=node_name,
         raw_sql=get_compiled_sql(manifest_node),
-        database=manifest_node.database.lower(),
+        database="IU",
         schema=manifest_node.schema_.lower(),
         columns=[],
         resource_type=node_name.split(".")[0],
